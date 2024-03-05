@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>My application</title>
+    <meta charset="utf-8">
+    <title>My application</title>
 </head>
 <body>
-	<h1>My application</h1>
-	<h2>More details in the console</h2>
+    <h1>My application</h1>
+    <h2>More details in the console</h2>
 
-	<script src="SpeakHello.js"></script>
-	<script src="SpeakGoodBye.js"></script>
-	<script src="script.js"></script>
+    <script src="SpeakHello.js"></script>
+    <script src="SpeakGoodBye.js"></script>
+    <script>
+        var names = ["Bill", "John", "Jen", "Jason", "Paul", "Frank", "Steven", "Larry", "Paula", "Laura", "Jim"];
+        for (var i = 0; i < names.length; i++) {
+            var firstLetter = names[i].charAt(0).toLowerCase();
+            if (firstLetter === 'j') {
+                byeSpeaker.speak(names[i]);
+            } else {
+                helloSpeaker.speak(names[i]);
+            }
+        }
+    </script>
 </body>
 </html>
